@@ -148,6 +148,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python高级特性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/15/python高级特性/">python高级特性</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/15/python高级特性/" class="archive-article-date">
+  	<time datetime="2017-09-15T11:40:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<ul>
+<li>python迭代</li>
+<li>python列表生成式</li>
+<li>python生成器<h2 id="python-迭代"><a href="#python-迭代" class="headerlink" title="python 迭代"></a>python 迭代</h2>如果给定一个list或tuple，我们可以通过for循环来遍历这个list或tuple，这种遍历我们成为迭代。<br>for循环不仅可以用在list或tuple上，还可以作用在其他可迭代对象上。<br>如何判断一个对象是可迭代对象呢？答案是用collections模块<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">form collections <span class="keyword">import</span> Iterable</div><div class="line">isinstance(<span class="string">'abc'</span>,Iterable)</div><div class="line">&gt;&gt;&gt;<span class="keyword">True</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<p>如果返回值为True就是可迭代对象，False就是不可迭代对象</p>
+<h2 id="列表生成式"><a href="#列表生成式" class="headerlink" title="列表生成式"></a>列表生成式</h2><p>顾名思义，列表生成式就是python内置的非常简单却强大的用来可以创建list的生成式。<br>上一段代码来证明python的优雅<br>生成[1<em>1,2</em>2,3<em>3,……..,10</em>10]怎么写代码</p>
+<h4 id="1-用循环来写"><a href="#1-用循环来写" class="headerlink" title="1. 用循环来写"></a>1. 用循环来写</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">l=[]</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>):</div><div class="line">    l.append(x * x)</div><div class="line">    </div><div class="line">&gt;&gt;&gt;l</div></pre></td></tr></table></figure>
+<h4 id="2-循环好麻烦，试一下列表生成式吧-只需要一行代码"><a href="#2-循环好麻烦，试一下列表生成式吧-只需要一行代码" class="headerlink" title="2. 循环好麻烦，试一下列表生成式吧,只需要一行代码"></a>2. 循环好麻烦，试一下列表生成式吧,只需要一行代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[x * x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>)]</div></pre></td></tr></table></figure>
+<p>isinstance可以判断一个变量是不是字符串，list中既有字符串，又有整数<br>l = [‘Hello’, ‘World’, 18, ‘Apple’, None]，将所有字符串变成小写，并只输出字符串！<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">l = [<span class="string">'Hello'</span>, <span class="string">'World'</span>, <span class="number">18</span>, <span class="string">'Apple'</span>, <span class="keyword">None</span>]</div><div class="line">l2=[s.lower() <span class="keyword">for</span> s <span class="keyword">in</span> l <span class="keyword">if</span> isinstance(s,str)]</div></pre></td></tr></table></figure></p>
+<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><p>列表生成式可以直接创建一个列表，但是由于内存限制，列表容量有限，如果仅仅访问前几个元素，则会造成内存浪费，所以，在python中，有一种边循环边计算的机制，叫做生成器 generator</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">pyton</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/15/python高级特性/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python-深拷贝、浅拷贝理解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -455,6 +542,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">pyton</a>
               </li>
             
             <div class="clearfix"></div>
